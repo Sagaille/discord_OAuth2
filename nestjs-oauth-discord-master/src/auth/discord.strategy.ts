@@ -7,9 +7,9 @@ import { AuthService } from './auth.service';
 import { Strategy } from 'passport-oauth2';
 import { stringify } from 'querystring';
 
-// change these to be your Discord client ID and secret - should be in .env to be cleaner
-const clientID = '';  
-const clientSecret = '';  
+// change these to be your Discord client ID and secret
+const clientID = '';		// here
+const clientSecret = '';	// here
 const callbackURL = 'http://localhost:8080/auth/discord';
 
 @Injectable()
@@ -19,15 +19,14 @@ export class DiscordStrategy extends PassportStrategy(Strategy, 'discord')
 		private authService: AuthService,
 		private http: HttpService,
 	) {
-		// super calls the constructor of the extended class
 		super({
-			authorizationURL: `https://discordapp.com/api/oauth2/authorize?${ stringify({
+			authorizationURL: `${ stringify({ // here
 				client_id    : clientID,
 				redirect_uri : callbackURL,
 				response_type: 'code',
 				scope        : 'identify',
 			}) }`,
-			tokenURL        : 'https://discordapp.com/api/oauth2/token',
+			tokenURL        : 'http://localhost:8080/auth/discord',
 			scope           : 'identify',
 			clientID,
 			clientSecret,

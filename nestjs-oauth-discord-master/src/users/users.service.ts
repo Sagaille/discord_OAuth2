@@ -12,17 +12,17 @@ export class UsersService
 		this.users = [
 			{
 				userId    : 1,
-				name      : '',
-				discord_id: '',
+				name      : 'bob',
+				discord_id: '1234sfaf',
 			},
 			{
 				userId    : 2,
-				name      : 'david',
-				discord_id: '',
+				name      : 'ldavids',
+				discord_id: '',			// here
 			},
 			{
 				userId    : 3,
-				name      : 'mariadb',
+				name      : 'maria',
 				discord_id: 'erh5ree45',
 			},
 		];

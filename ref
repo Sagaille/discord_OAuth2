@@ -6,3 +6,13 @@ cd to the new project then install passport:
 npm i @nestjs/passport passport passport-oauth2
 npm i -D @types/passport-oauth2
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+This projects tuto has deprecated libraries etc. It may need some more fixes like I did on mac.
+I had to:
+```bash
+npm install core-js
+npm install -D babel-loader @babel/core @babel/preset-env webpac
+npm audit fix
+```bash
+
+Some problems might come from my install on mac too - or the network itself (don't like the ssl or app) a proxy might fix it.
