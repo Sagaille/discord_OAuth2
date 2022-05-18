@@ -12,6 +12,8 @@ Authentication via Discord using OAuth2 to an existing app.
 Main reference :
 https://www.nerd.vision/post/nestjs-third-party-oauth2-authentication
 
+Don't forget to create your discord API token + paste those credentials in the strategy
+
 ## Installation
 
 ```bash
@@ -29,17 +31,4 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
 ```
